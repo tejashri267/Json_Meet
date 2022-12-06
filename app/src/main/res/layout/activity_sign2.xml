@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBack"
+    tools:context=".activities.sign2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorIcon"
+                android:textSize="@dimen/_15sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:includeFontPadding="false"
+                android:text="@string/json_meet"
+                android:textColor="@color/colorIcon"
+                android:textSize="@dimen/_15sdp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signinlabel"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:includeFontPadding="false"
+            android:text="Sign In"
+            android:textColor="@color/colorPrimaryTest"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardsignin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/signinlabel">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/email"
+                    android:textColor="@color/colorPrimaryTest"
+                    android:textSize="@dimen/_10ssp"/>
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:hint="@string/your_example_com"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorPrimaryTest"
+                    android:textColorHint="@color/colorHint"
+                    android:textSize="@dimen/_13ssp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/password"
+                    android:textColor="@color/colorPrimaryTest"
+                    android:textSize="@dimen/_10ssp"/>
+                <EditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:hint="@string/password_hint"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorPrimaryTest"
+                    android:textColorHint="@color/colorHint"
+                    android:textSize="@dimen/_13ssp"/>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signinbtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:includeFontPadding="false"
+                android:text="@string/sign_in"
+                android:textSize="@dimen/_13ssp"
+                android:textColor="@color/colorIcon"
+                app:layout_constraintTop_toBottomOf="@id/cardsignin"/>
+            <ProgressBar
+                android:id="@+id/signinbar"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/signinbtn"
+                app:layout_constraintEnd_toEndOf="@id/signinbtn"
+                app:layout_constraintStart_toStartOf="@id/signinbtn"
+                app:layout_constraintTop_toTopOf="@id/signinbtn"/>
+
+
+            <TextView
+                android:id="@+id/noacc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/dont_have_any_account"
+                android:textColor="@color/colorPrimaryTest"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintTop_toBottomOf="@id/signinbtn"/>
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/_6sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/noacc"
+                />
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

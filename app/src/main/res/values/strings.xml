@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name" translatable="false">Json Meet</string>
+    <string name="welcome_to">Welcome To</string>
+    <string name="json_meet">Json Meet</string>
+    <string name="sing_in">Sing In</string>
+    <string name="email">Email</string>
+    <string name="your_example_com">your@example.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint">• • • • • •</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="dont_have_any_account">Dont Have Any Account</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="we_need_a_few_details_to_get_your_account_ready">we need a few details to get your account ready</string>
+    <string name="first_name">First Name</string>
+    <string name="danis">Danis</string>
+    <string name="last_name">Last Name</string>
+    <string name="gadkari">Gadkari</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="already_have_an_account">Already Have An Account</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="incoming_meeting_invitation">Incoming Meeting Invitation</string>
+    <string name="sending_meeting_invitation">Sending Meeting Invitation</string>
+</resources>
